@@ -8,14 +8,19 @@ package Programas;
 import java.util.ArrayList;
 
 /**
- *
  * @author hdavi
  */
 public class Game {
     
     private int cantJugadores;
     private ArrayList<Jugador> jugadores;
+
+    public ArrayList<Jugador> getJugadores() {
+        return jugadores;
+    }
     private int Turno;
+    private int cantTurnos;
+    private boolean hayGanador;
     
     public Game(ArrayList<Jugador> pJugadores){
         Turno = 1;

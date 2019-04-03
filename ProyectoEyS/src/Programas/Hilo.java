@@ -5,10 +5,35 @@
  */
 package Programas;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author irsac
  */
-public class Hilo {
-    
+public class Hilo extends Thread {
+    private int x;
+    private int y;
+    private JLabel etiqueta;
+    private int ciclo;
+	
+	public Hilo(JLabel etiqueta, int x,int y, int val){
+		this.x=x;
+                this.y=y;
+		this.etiqueta = etiqueta;
+		ciclo=val;
+	}
+	public void run(){
+		while(ciclo!=0) {
+			x-=(etiqueta.getWidth()+2);
+			etiqueta.setLocation(x, y);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			ciclo--;
+		}
+	}
 }

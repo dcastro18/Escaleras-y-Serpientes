@@ -10,6 +10,8 @@ public class Jugador {
 	private boolean isGanador;
 	private int turno;
 	private boolean inTablero;
+        private int ejeX;
+        private int ejeY;
 	
 	public Jugador(String pNombre) {
 		this.setNombre(pNombre);
@@ -48,6 +50,7 @@ public class Jugador {
 	public int getTurno() {
 		return turno;
 	}
+        
 	public void setTurno(int turno) {
 		this.turno = turno;
 	}
