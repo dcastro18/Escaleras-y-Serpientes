@@ -26,6 +26,7 @@ public class Hilo extends Thread {
 	public void run(){
 		while(ciclo!=0) {
 			x-=(etiqueta.getWidth()+2);
+                        //y-=70;
 			etiqueta.setLocation(x, y);
 			try {
 				Thread.sleep(500);

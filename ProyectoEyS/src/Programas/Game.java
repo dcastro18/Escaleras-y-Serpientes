@@ -34,6 +34,9 @@ public class Game {
         String nDado = Integer.toString(numero);
         return nDado;
     }
+    public int getPosJugador(int val){
+        return jugadores.get(val).getPosicion();
+    }
     
     public int getTurno(){
         return Turno;
