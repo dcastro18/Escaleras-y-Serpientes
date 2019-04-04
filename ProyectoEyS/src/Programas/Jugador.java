@@ -7,8 +7,9 @@ public class Jugador {
 	
 	private String nombre;
 	private boolean isNPC;
-	private int posicion;
-	private boolean inTablero;
+	private int posicion=0;
+	private boolean inTablero=false;
+        private int fila=0;
 	
 	public Jugador(String pNombre) {
 		this.setNombre(pNombre);
@@ -35,15 +36,23 @@ public class Jugador {
 	public int getPosicion() {
 		return posicion;
 	}
-	public void setPosicion(int posicion) {
-		this.posicion = posicion;
+	public void setPosicion(int pPosicion) {
+		posicion = pPosicion;
+                System.out.println(posicion);
 	}
 	public boolean isInTablero() {
 		return inTablero;
 	}
-	private void setInTablero(boolean inTablero) {
+	public void setInTablero(boolean inTablero) {
 		this.inTablero = inTablero;
 	}
+        public int getFila(){
+            return fila;
+        }
+        public void setFila(){
+            int val=posicion/10;
+            fila=val;
+        }
 	public String toString() {
 		String msg="";
 		msg="Nombre del jugador: "+this.getNombre()+"\n";

@@ -82,15 +82,16 @@ public class venJuego extends javax.swing.JFrame {
                     //juego.getJugadores().get(0).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
                         colorDado.setBackground(new Color(255, 0, 0));
-                        Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado);
+                        Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado,personaje);
                         h.start();
-                        personaje.cambiarPosicion(numDado, ficha1);
+                        //juego.getJugadores().get(0).setPosicion(nuevaPos);
+                        //personaje.cambiarPosicion(numDado, ficha1);
                         //jLabel8.setLocation(120, 43);}
                     }
                     else{
                         colorDado.setBackground(new Color(255, 0, 0));
                         //jLabel8.setLocation(120, 43);
-                        Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado);
+                        Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado,personaje);
                         h.start();
                         personaje.cambiarPosicion(numDado, ficha1);
                         juego.cambioTurno();
@@ -105,32 +106,33 @@ public class venJuego extends javax.swing.JFrame {
                     //juego.getJugadores().get(1).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
                         colorDado.setBackground(new Color(66, 1, 76));
-                        Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado);
+                        Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado,personaje);
                         h.start();
-                        personaje.cambiarPosicion(numDado, ficha2);
+                        //personaje.cambiarPosicion(numDado, ficha2);
                     }
                     else{
                         colorDado.setBackground(new Color(66, 1, 76));
-                        Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado);
+                        Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado,personaje);
                         h.start();
-                        personaje.cambiarPosicion(numDado, ficha2);
+                        //personaje.cambiarPosicion(numDado, ficha2);
                         juego.cambioTurno();
                     }
                     break;
                 case 3:
-                    posicion=juego.getJugadores().get(2).getPosicion();
+                    personaje=juego.getJugadores().get(2);
+                    posicion=personaje.getPosicion();
                     numDado = Integer.parseInt(nDado);
                     nuevaPos = posicion+numDado;
                     juego.getJugadores().get(2).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
                         colorDado.setBackground(new Color(255, 240, 0));
-                        Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado);
+                        Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado,personaje);
                         h.start();
                         
                     }
                     else{
                         colorDado.setBackground(new Color(255, 240, 0));
-                        Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado);
+                        Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado,personaje);
                         h.start();
                         juego.cambioTurno();
                     }
@@ -142,13 +144,13 @@ public class venJuego extends javax.swing.JFrame {
                     juego.getJugadores().get(3).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
                         colorDado.setBackground(new Color( 0, 255, 252));
-                        Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado);
-                        h.start();
+                        //Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado);
+                        //h.start();
                     }
                     else{
                         colorDado.setBackground(new Color( 0, 255, 252));
-                        Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado);
-                        h.start();
+                        //Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado);
+                       // h.start();
                         juego.cambioTurno();
                     }
                     colorDado.setBackground(new Color( 0, 255, 252));
