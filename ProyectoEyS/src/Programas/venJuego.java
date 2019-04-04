@@ -93,7 +93,7 @@ public class venJuego extends javax.swing.JFrame {
                         //jLabel8.setLocation(120, 43);
                         Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado,personaje);
                         h.start();
-                        personaje.cambiarPosicion(numDado, ficha1);
+                        //personaje.cambiarPosicion(numDado, ficha1);
                         juego.cambioTurno();
                         
                     }

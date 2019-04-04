@@ -62,7 +62,7 @@ public class Jugador {
 		return msg;
 	}
 	
-	public void cambiarPosicion(int movimiento, JLabel etiqueta) {
+	/*public void cambiarPosicion(int movimiento, JLabel etiqueta) {
 		int pos= this.getPosicion() + movimiento;
 		if(inTablero) {
 			if(pos>100) {
@@ -148,5 +148,5 @@ public class Jugador {
 	private void volverATirar() {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 }
