@@ -53,6 +53,7 @@ public class Jugador {
             int val=posicion/10;
             fila=val;
         }
+        
 	public String toString() {
 		String msg="";
 		msg="Nombre del jugador: "+this.getNombre()+"\n";

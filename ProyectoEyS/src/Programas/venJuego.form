@@ -125,7 +125,6 @@
           <Color blue="ff" green="cc" red="99" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
-        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -139,7 +138,6 @@
           <Color blue="ff" green="cc" red="99" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
-        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -153,7 +151,6 @@
           <Color blue="ff" green="cc" red="99" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
-        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -167,7 +164,6 @@
           <Color blue="ff" green="cc" red="99" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
-        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

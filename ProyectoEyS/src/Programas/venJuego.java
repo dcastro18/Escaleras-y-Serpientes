@@ -28,6 +28,23 @@ public class venJuego extends javax.swing.JFrame {
     public venJuego(ArrayList<Jugador> pJugadores,int pCantJugadores) {
         initComponents();
         
+        ImageIcon fichaR  = new ImageIcon("src/img/FichaRoja.png");
+        Icon fichaRoja = new ImageIcon(fichaR.getImage().getScaledInstance(ficha1.getWidth(), ficha1.getHeight(), Image.SCALE_DEFAULT));
+        ficha1.setIcon(fichaRoja);
+        
+        ImageIcon fichaM  = new ImageIcon("src/img/FichaMorada.png");
+        Icon fichaMorada = new ImageIcon(fichaM.getImage().getScaledInstance(ficha2.getWidth(), ficha2.getHeight(), Image.SCALE_DEFAULT));
+        ficha2.setIcon(fichaMorada);
+        
+        ImageIcon fichaA  = new ImageIcon("src/img/FichaAmarrilla.png");
+        Icon fichaAmarrilla = new ImageIcon(fichaA.getImage().getScaledInstance(ficha3.getWidth(), ficha3.getHeight(), Image.SCALE_DEFAULT));
+        ficha3.setIcon(fichaAmarrilla);
+        
+        ImageIcon fichaC  = new ImageIcon("src/img/FichaCeleste.png");
+        Icon fichaCeleste = new ImageIcon(fichaC.getImage().getScaledInstance(ficha4.getWidth(), ficha4.getHeight(), Image.SCALE_DEFAULT));
+        ficha4.setIcon(fichaCeleste);
+             
+        
         String njugador1 = pJugadores.get(0).getNombre();
         this.jugador1.setText(njugador1);
         this.jugador2.setText("");
@@ -77,7 +94,7 @@ public class venJuego extends javax.swing.JFrame {
                     Jugador personaje = juego.getJugadores().get(0);
                     int posicion=personaje.getPosicion();
                     int numDado = Integer.parseInt(nDado);
-                    int nuevaPos = posicion+numDado;
+                    //int nuevaPos = posicion+numDado;
                     
                     //juego.getJugadores().get(0).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
@@ -102,7 +119,7 @@ public class venJuego extends javax.swing.JFrame {
                     personaje=juego.getJugadores().get(1);
                     posicion=personaje.getPosicion();
                     numDado = Integer.parseInt(nDado);
-                    nuevaPos = posicion+numDado;
+                    //nuevaPos = posicion+numDado;
                     //juego.getJugadores().get(1).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
                         colorDado.setBackground(new Color(66, 1, 76));
@@ -122,8 +139,8 @@ public class venJuego extends javax.swing.JFrame {
                     personaje=juego.getJugadores().get(2);
                     posicion=personaje.getPosicion();
                     numDado = Integer.parseInt(nDado);
-                    nuevaPos = posicion+numDado;
-                    juego.getJugadores().get(2).setPosicion(nuevaPos);
+                    //nuevaPos = posicion+numDado;
+                    //juego.getJugadores().get(2).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
                         colorDado.setBackground(new Color(255, 240, 0));
                         Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado,personaje);
@@ -138,23 +155,24 @@ public class venJuego extends javax.swing.JFrame {
                     }
                     break;
                 case 4:
-                    posicion=juego.getJugadores().get(3).getPosicion();
+                    personaje=juego.getJugadores().get(3);
+                    posicion=personaje.getPosicion();
                     numDado = Integer.parseInt(nDado);
-                    nuevaPos = posicion+numDado;
-                    juego.getJugadores().get(3).setPosicion(nuevaPos);
+                    //nuevaPos = posicion+numDado;
+                    //juego.getJugadores().get(3).setPosicion(nuevaPos);
                     if(nDado.equals("6")){
                         colorDado.setBackground(new Color( 0, 255, 252));
-                        //Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado);
-                        //h.start();
+                        Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado,personaje);
+                        h.start();
                     }
                     else{
                         colorDado.setBackground(new Color( 0, 255, 252));
-                        //Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado);
-                       // h.start();
+                        Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado,personaje);
+                        h.start();
                         juego.cambioTurno();
                     }
-                    colorDado.setBackground(new Color( 0, 255, 252));
-                    juego.cambioTurno();
+                    //colorDado.setBackground(new Color( 0, 255, 252));
+                    //juego.cambioTurno();
                     break;
                 }
                 ImageIcon dado  = new ImageIcon("src/img/"+nDado+".png");
@@ -236,22 +254,18 @@ public class venJuego extends javax.swing.JFrame {
 
         ficha1.setBackground(new java.awt.Color(153, 204, 255));
         ficha1.setText("jLabel1");
-        ficha1.setOpaque(true);
         getContentPane().add(ficha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(688, 650, 36, 36));
 
         ficha2.setBackground(new java.awt.Color(153, 204, 255));
         ficha2.setText("jLabel1");
-        ficha2.setOpaque(true);
         getContentPane().add(ficha2, new org.netbeans.lib.awtextra.AbsoluteConstraints(688, 650, 36, 36));
 
         ficha3.setBackground(new java.awt.Color(153, 204, 255));
         ficha3.setText("jLabel1");
-        ficha3.setOpaque(true);
         getContentPane().add(ficha3, new org.netbeans.lib.awtextra.AbsoluteConstraints(688, 650, 36, 36));
 
         ficha4.setBackground(new java.awt.Color(153, 204, 255));
         ficha4.setText("jLabel1");
-        ficha4.setOpaque(true);
         getContentPane().add(ficha4, new org.netbeans.lib.awtextra.AbsoluteConstraints(688, 650, 36, 36));
 
         tableroFondo.setName("fondo"); // NOI18N
