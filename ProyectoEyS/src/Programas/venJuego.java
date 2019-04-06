@@ -97,82 +97,132 @@ public class venJuego extends javax.swing.JFrame {
                     //int nuevaPos = posicion+numDado;
                     
                     //juego.getJugadores().get(0).setPosicion(nuevaPos);
-                    if(nDado.equals("6")){
-                        colorDado.setBackground(new Color(255, 0, 0));
-                        Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado,personaje);
-                        h.start();
-                        //juego.getJugadores().get(0).setPosicion(nuevaPos);
-                        //personaje.cambiarPosicion(numDado, ficha1);
-                        //jLabel8.setLocation(120, 43);}
+                    if(!personaje.isInTablero() ){
+                        if(nDado.equals("5")){
+                            colorDado.setBackground(new Color(255, 0, 0));
+                            personaje.setInTablero(true);
+                        }
+                        else{
+                            colorDado.setBackground(new Color(255, 0, 0));
+                            juego.cambioTurno();
+                        }
                     }
                     else{
-                        colorDado.setBackground(new Color(255, 0, 0));
-                        //jLabel8.setLocation(120, 43);
-                        Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado,personaje);
-                        h.start();
-                        //personaje.cambiarPosicion(numDado, ficha1);
-                        juego.cambioTurno();
                         
+         
+                        if(nDado.equals("6")){
+                            colorDado.setBackground(new Color(255, 0, 0));
+                            Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado,personaje);
+                            h.start();
+                            //juego.getJugadores().get(0).setPosicion(nuevaPos);
+                            //personaje.cambiarPosicion(numDado, ficha1);
+                            //jLabel8.setLocation(120, 43);}
+                        }
+                        else{
+                            colorDado.setBackground(new Color(255, 0, 0));
+                            //jLabel8.setLocation(120, 43);
+                            Hilo h=new Hilo(ficha1,ficha1.getX(),ficha1.getY(),numDado,personaje);
+                            h.start();
+                            //personaje.cambiarPosicion(numDado, ficha1);
+                            juego.cambioTurno();
+
+                        }
                     }
                     break;
                 case 2:
                     personaje=juego.getJugadores().get(1);
                     posicion=personaje.getPosicion();
                     numDado = Integer.parseInt(nDado);
+                    if(!personaje.isInTablero() ){
+                        if(nDado.equals("5")){
+                            colorDado.setBackground(new Color(66, 1, 76));
+                            personaje.setInTablero(true);
+                        }
+                        else{
+                            colorDado.setBackground(new Color(66, 1, 76));
+                            juego.cambioTurno();
+                        }
+                    }
+                     else{
                     //nuevaPos = posicion+numDado;
                     //juego.getJugadores().get(1).setPosicion(nuevaPos);
-                    if(nDado.equals("6")){
-                        colorDado.setBackground(new Color(66, 1, 76));
-                        Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado,personaje);
-                        h.start();
-                        //personaje.cambiarPosicion(numDado, ficha2);
-                    }
-                    else{
-                        colorDado.setBackground(new Color(66, 1, 76));
-                        Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado,personaje);
-                        h.start();
-                        //personaje.cambiarPosicion(numDado, ficha2);
-                        juego.cambioTurno();
+                        if(nDado.equals("6")){
+                            colorDado.setBackground(new Color(66, 1, 76));
+                            Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado,personaje);
+                            h.start();
+                            //personaje.cambiarPosicion(numDado, ficha2);
+                        }
+                        else{
+                            colorDado.setBackground(new Color(66, 1, 76));
+                            Hilo h=new Hilo(ficha2,ficha2.getX(),ficha2.getY(),numDado,personaje);
+                            h.start();
+                            //personaje.cambiarPosicion(numDado, ficha2);
+                            juego.cambioTurno();
+                        }
                     }
                     break;
                 case 3:
                     personaje=juego.getJugadores().get(2);
                     posicion=personaje.getPosicion();
                     numDado = Integer.parseInt(nDado);
-                    //nuevaPos = posicion+numDado;
-                    //juego.getJugadores().get(2).setPosicion(nuevaPos);
-                    if(nDado.equals("6")){
-                        colorDado.setBackground(new Color(255, 240, 0));
-                        Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado,personaje);
-                        h.start();
-                        
+                    if(!personaje.isInTablero() ){
+                        if(nDado.equals("5")){
+                            colorDado.setBackground(new Color(255, 240, 0));
+                            personaje.setInTablero(true);
+                        }
+                        else{
+                            colorDado.setBackground(new Color(255, 240, 0));
+                            juego.cambioTurno();
+                        }
                     }
                     else{
-                        colorDado.setBackground(new Color(255, 240, 0));
-                        Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado,personaje);
-                        h.start();
-                        juego.cambioTurno();
+                        //nuevaPos = posicion+numDado;
+                        //juego.getJugadores().get(2).setPosicion(nuevaPos);
+                        if(nDado.equals("6")){
+                            colorDado.setBackground(new Color(255, 240, 0));
+                            Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado,personaje);
+                            h.start();
+
+                        }
+                        else{
+                            colorDado.setBackground(new Color(255, 240, 0));
+                            Hilo h=new Hilo(ficha3,ficha3.getX(),ficha3.getY(),numDado,personaje);
+                            h.start();
+                            juego.cambioTurno();
+                        }
                     }
                     break;
                 case 4:
                     personaje=juego.getJugadores().get(3);
                     posicion=personaje.getPosicion();
                     numDado = Integer.parseInt(nDado);
+                    if(!personaje.isInTablero() ){
+                        if(nDado.equals("5")){
+                            colorDado.setBackground(new Color( 0, 255, 252));
+                            personaje.setInTablero(true);
+                        }
+                        else{
+                            colorDado.setBackground(new Color( 0, 255, 252));
+                            juego.cambioTurno();
+                        }
+                    }
                     //nuevaPos = posicion+numDado;
                     //juego.getJugadores().get(3).setPosicion(nuevaPos);
-                    if(nDado.equals("6")){
-                        colorDado.setBackground(new Color( 0, 255, 252));
-                        Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado,personaje);
-                        h.start();
-                    }
                     else{
-                        colorDado.setBackground(new Color( 0, 255, 252));
-                        Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado,personaje);
-                        h.start();
-                        juego.cambioTurno();
+                        if(nDado.equals("6")){
+                            colorDado.setBackground(new Color( 0, 255, 252));
+                            Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado,personaje);
+                            h.start();
+                        }
+                        else{
+                            colorDado.setBackground(new Color( 0, 255, 252));
+                            Hilo h=new Hilo(ficha4,ficha4.getX(),ficha4.getY(),numDado,personaje);
+                            h.start();
+                            juego.cambioTurno();
+                        }
+                        //colorDado.setBackground(new Color( 0, 255, 252));
+                        //juego.cambioTurno();
                     }
-                    //colorDado.setBackground(new Color( 0, 255, 252));
-                    //juego.cambioTurno();
                     break;
                 }
                 ImageIcon dado  = new ImageIcon("src/img/"+nDado+".png");
@@ -207,11 +257,11 @@ public class venJuego extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        imagenDado = new javax.swing.JLabel();
         jugador4 = new javax.swing.JLabel();
         jugador3 = new javax.swing.JLabel();
         jugador1 = new javax.swing.JLabel();
         jugador2 = new javax.swing.JLabel();
-        imagenDado = new javax.swing.JLabel();
         colorDado = new javax.swing.JLabel();
         botonTirar = new javax.swing.JLabel();
         ficha1 = new javax.swing.JLabel();
@@ -219,12 +269,17 @@ public class venJuego extends javax.swing.JFrame {
         ficha3 = new javax.swing.JLabel();
         ficha4 = new javax.swing.JLabel();
         tableroFondo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Escaleras Y Serpientes");
         setResizable(false);
         setSize(new java.awt.Dimension(730, 704));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        imagenDado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6.png"))); // NOI18N
+        getContentPane().add(imagenDado, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 170, 180));
 
         jugador4.setForeground(new java.awt.Color(0, 255, 252));
         jugador4.setText("Jugador 4");
@@ -241,9 +296,6 @@ public class venJuego extends javax.swing.JFrame {
         jugador2.setForeground(new java.awt.Color(66, 1, 76));
         jugador2.setText("Jugador 2");
         getContentPane().add(jugador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 98, -1, -1));
-
-        imagenDado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6.png"))); // NOI18N
-        getContentPane().add(imagenDado, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 170, 180));
 
         colorDado.setBackground(new java.awt.Color(255, 0, 0));
         colorDado.setOpaque(true);
@@ -271,6 +323,12 @@ public class venJuego extends javax.swing.JFrame {
         tableroFondo.setName("fondo"); // NOI18N
         getContentPane().add(tableroFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 704));
 
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, -1, -1));
+
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, -1, -1));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -285,6 +343,8 @@ public class venJuego extends javax.swing.JFrame {
     private javax.swing.JLabel ficha3;
     private javax.swing.JLabel ficha4;
     private javax.swing.JLabel imagenDado;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jugador1;
     private javax.swing.JLabel jugador2;
     private javax.swing.JLabel jugador3;
